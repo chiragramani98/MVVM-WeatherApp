@@ -52,7 +52,7 @@ data class Daily(
     }
 
     fun getDateAndDay(): String? {
-        val sdf = SimpleDateFormat("dd MMMM")
+        val sdf = SimpleDateFormat("dd MMMM/yyyy")
         val netDate = Date(dt.toLong() * 1000)
         val formattedDate = sdf.format(netDate)
 

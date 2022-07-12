@@ -1,12 +1,10 @@
 package com.projects.weatherdrop.adapter
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.projects.weatherdrop.data.model.Daily
 import com.projects.weatherdrop.data.model.Hourly
 import com.projects.weatherdrop.databinding.HourlyWeatherListBinding
 

@@ -55,12 +55,10 @@ class ForecastFragment : Fragment() {
     }
 
     private fun observeViewModel(){
-        //Log.d("ObserveViewModel", "Working")
         mWeatherViewModel.getCurrentWeather(sharedPreferenceHelper.getLocationModel())
         with(mWeatherViewModel){
             weatherResponse.observe(viewLifecycleOwner, Observer {
                 dailyWeatherAdapter.submitList(it.daily)
-                //Log.d("DAILY", it.daily.toString())
             })
         }
     }

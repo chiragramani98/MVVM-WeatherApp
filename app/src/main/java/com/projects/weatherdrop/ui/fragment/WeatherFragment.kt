@@ -61,23 +61,6 @@ class WeatherFragment : Fragment() {
 
         initiateRefresh()
 
-        /*if (NetworkUtil.hasInternetConnection(requireContext())){
-            if (sharedPreferenceHelper.getPlaceName() != null){
-                binding.weatherLayout.visibility = View.VISIBLE
-                //observeViewModel()
-
-                initiateRefresh()
-            } else {
-                binding.noPlaceSelectedLayout.visibility = View.VISIBLE
-                binding.noInternetLayout.visibility = View.GONE
-                binding.weatherLayout.visibility = View.GONE
-            }
-        } else {
-            binding.noPlaceSelectedLayout.visibility = View.GONE
-            binding.noInternetLayout.visibility = View.VISIBLE
-            binding.weatherLayout.visibility = View.GONE
-        }*/
-
         binding.swipeRefereshLayout.setOnRefreshListener {
             binding.weatherProgressbar.visibility = View.GONE
             initiateRefresh()
@@ -157,54 +140,6 @@ class WeatherFragment : Fragment() {
             binding.noInternetLayout.visibility = View.VISIBLE
             binding.weatherLayout.visibility = View.GONE
         }
-
-        /*mWeatherViewModel.getWeather(sharedPreferenceHelper.getLocationModel())
-        with(mWeatherViewModel){
-            weatherResponse.observe(viewLifecycleOwner, Observer { currentWeather ->
-                currentWeather.let {
-                    binding.weatherData = it
-
-                    hourlyWeatherAdapter.submitList(it.hourly)
-                }
-            })
-
-            dataFetchState.observe(viewLifecycleOwner) { state ->
-                when (state) {
-                    true -> {
-                        binding.apply {
-                            weatherLayout.visibility = View.VISIBLE
-                            weatherError.visibility = View.GONE
-                        }
-                    }
-                    false -> {
-                        binding.apply {
-                            weatherLayout.visibility = View.GONE
-                            weatherError.visibility = View.VISIBLE
-                            weatherProgressbar.visibility = View.GONE
-                            fetchingWeather.visibility = View.GONE
-                        }
-                    }
-                }
-            }
-
-            isLoading.observe(viewLifecycleOwner) { state ->
-                when (state) {
-                    true -> {
-                        binding.apply {
-                            weatherLayout.visibility = View.GONE
-                            weatherProgressbar.visibility = View.VISIBLE
-                            fetchingWeather.visibility = View.VISIBLE
-                        }
-                    }
-                    false -> {
-                        binding.apply {
-                            weatherProgressbar.visibility = View.GONE
-                            fetchingWeather.visibility = View.GONE
-                        }
-                    }
-                }
-            }
-        }*/
     }
 
     private fun initiateRefresh(){
