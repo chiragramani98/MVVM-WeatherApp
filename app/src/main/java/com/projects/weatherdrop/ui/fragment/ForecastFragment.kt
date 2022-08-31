@@ -55,7 +55,7 @@ class ForecastFragment : Fragment() {
     }
 
     private fun observeViewModel(){
-        mWeatherViewModel.getCurrentWeather(sharedPreferenceHelper.getLocationModel())
+        mWeatherViewModel.getWeather(sharedPreferenceHelper.getLocationModel())
         with(mWeatherViewModel){
             weatherResponse.observe(viewLifecycleOwner, Observer {
                 dailyWeatherAdapter.submitList(it.daily)

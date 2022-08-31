@@ -249,8 +249,8 @@
                         android:text="@string/next_7_days"
                         android:textSize="15sp"
                         android:textStyle="bold"
-                        app:layout_constraintBottom_toTopOf="@+id/hourly_weather_recycler"
-                        app:layout_constraintEnd_toEndOf="parent" />
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toTopOf="@+id/hourly_weather_recycler" />
 
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/hourly_weather_recycler"

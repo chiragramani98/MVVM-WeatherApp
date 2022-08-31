@@ -1,14 +1,9 @@
 package com.projects.weatherdrop.data.model
 
-import android.content.Context
-import android.graphics.Color
-import androidx.core.content.ContextCompat
-import com.projects.weatherdrop.R
 import java.text.SimpleDateFormat
 import java.time.DayOfWeek
 import java.time.LocalDate
 import java.util.*
-import kotlin.coroutines.coroutineContext
 
 data class Daily(
     val clouds: Int,

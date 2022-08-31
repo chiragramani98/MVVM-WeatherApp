@@ -17,7 +17,7 @@ import javax.inject.Inject
 @HiltViewModel
 class WeatherViewModel @Inject constructor(
     private val weatherRepository: WeatherRepository,
-    val sharedPreferenceHelper: SharedPreferenceHelper
+    private val sharedPreferenceHelper: SharedPreferenceHelper
 ): ViewModel() {
 
     private val _isLoading = MutableLiveData<Boolean>()
@@ -27,16 +27,6 @@ class WeatherViewModel @Inject constructor(
     val dataFetchState = _dataFetchState.asLiveData()
 
     val weatherResponse: MutableLiveData<WeatherResponse> = MutableLiveData()
-
-    fun getCurrentWeather(locationModel: LocationModel) =
-        viewModelScope.launch {
-            try {
-                val response = weatherRepository.getCurrentWeather(locationModel)
-                weatherResponse.postValue(response.body())
-            } catch (e: Exception){
-                Log.d("EXCEPTION", e.toString())
-            }
-        }
 
     fun getWeather(locationModel: LocationModel){
         _isLoading.postValue(true)

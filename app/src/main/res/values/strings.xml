@@ -7,10 +7,11 @@
     <string name="error_occurred">Oops! An error occurred. \n\n Please check your internet connection.
         \n\n Swipe down to retry.</string>
     <string name="no_internet_error">Network currently unavailable</string>
-    <string name="no_place_selected_error">Please search for places to check weather information</string>
+    <string name="no_place_selected_error">Please search for places to check weather information</string>`
     <string name="humidity">Humidity</string>
     <string name="wind">Wind</string>
     <string name="pressure">Pressure</string>
     <string name="sunrise">Sunrise</string>
-    <string name="sunset">Sunset</string>
+    <string name="sunset">Sunset</string>`
+    <string name="no_photos_were_found">No photos were found</string>
 </resources>

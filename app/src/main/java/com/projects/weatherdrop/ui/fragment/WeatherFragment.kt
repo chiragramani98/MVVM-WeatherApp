@@ -23,7 +23,6 @@ import com.projects.weatherdrop.R
 import com.projects.weatherdrop.adapter.HourlyWeatherAdapter
 import com.projects.weatherdrop.data.model.LocationModel
 import com.projects.weatherdrop.databinding.FragmentWeatherBinding
-import com.projects.weatherdrop.util.Constants
 import com.projects.weatherdrop.util.NetworkUtil
 import com.projects.weatherdrop.util.SharedPreferenceHelper
 import com.projects.weatherdrop.viewmodel.WeatherViewModel
